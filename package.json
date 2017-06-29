@@ -1,0 +1,26 @@
+{
+  "name": "kilmajster.github.io.git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server  --content-base=./ --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilmajster/kilmajster.github.io.git"
+  },
+  "author": "Łukasz Włódarczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilmajster/kilmajster.github.io/issues"
+  },
+  "homepage": "https://github.com/kilmajster/kilmajster.github.io#readme",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "babel-core":"^7.0.0-alpha.12",
+    "babel-loader": "^7.1.1",
+    "webpack": "^3.0.0"
+  }
+}
