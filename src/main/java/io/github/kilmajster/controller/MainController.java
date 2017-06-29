@@ -1,10 +1,14 @@
 package io.github.kilmajster.controller;
 
 import io.github.kilmajster.model.HelloMessage;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -24,5 +28,15 @@ public class MainController {
                 .message("Hello " + request.getRemoteAddr())
                 .currentTime(new Date())
                 .build();
+    }
+
+    @Bean
+    private WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("https://kilmajster.herokuapp.com/");
+            }
+        };
     }
 }
