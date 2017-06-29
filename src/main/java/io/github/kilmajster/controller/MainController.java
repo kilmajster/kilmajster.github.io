@@ -18,7 +18,7 @@ public class MainController {
 
     @GetMapping("/")
     public @ResponseBody HelloMessage index(HttpServletRequest request) {
-        
+
         return HelloMessage.builder()
                 .id(Long.valueOf(counter.incrementAndGet()))
                 .message("Hello " + request.getRemoteAddr())

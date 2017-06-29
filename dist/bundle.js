@@ -71,10 +71,11 @@ var $ = __webpack_require__(1);
 
 $(document).ready(function () {
     $.ajax({
-        url: "http://rest-service.guides.spring.io/greeting"
+        url: "https://kilmajster.herokuapp.com/"
     }).then(function (data) {
-        $('.greeting-id').append(data.id);
-        $('.greeting-content').append(data.content);
+        $('.hello-id').append(data.id);
+        $('.hello-message').append(data.message);
+        $('.hello-time').append(data.currentTime);
     });
 });
 
