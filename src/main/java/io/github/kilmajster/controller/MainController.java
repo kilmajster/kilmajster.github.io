@@ -13,7 +13,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequestMapping("/")
-@CrossOrigin(origins = "https://kilmajster.herokuapp.com")
 public class MainController {
 
     private AtomicInteger counter = new AtomicInteger(0);
