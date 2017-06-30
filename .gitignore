@@ -2,6 +2,7 @@
 node_modules/
 *.log
 target/
+*.iml
 
 ## Package Files
 *.jar

@@ -2,7 +2,7 @@ var $ = require("jquery");
 
 $(document).ready(function() {
     $.ajax({
-        url: "https://kilmajster.herokuapp.com/"
+        url: "http://kilmajster.herokuapp.com/"
     }).then(function(data) {
        $('.hello-id').append(data.id);
        $('.hello-message').append(data.message);
